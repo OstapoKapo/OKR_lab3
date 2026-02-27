@@ -4,37 +4,56 @@
     <meta charset="UTF-8">
     <meta name="author" content="Prodaniuk Ostap">
     <title>Туристичні напрямки - Таблиці</title>
+    <!-- Підключення зовнішнього CSS файлу -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Стиль рівня документу для перевизначення стилю посилань -->
+    <style>
+        /* Перевизначення стилів посилань на рівні документу */
+        a {
+            color: #1e8449;
+            font-weight: 500;
+        }
+        a:hover {
+            color: #e67e22;
+            text-decoration: underline dotted;
+        }
+        /* Специфічні стилі для цієї сторінки */
+        body {
+            background-color: #f0fff0 !important;
+        }
+    </style>
 </head>
-<body bgcolor="#f0fff0" link="#0066cc" vlink="#663399" alink="#ff0000">
+<body>
 
-    <h1>Туристичні напрямки світу</h1>
+    <h1 id="main-title">Туристичні напрямки світу</h1>
     
-    <p><b>Подорожі</b> — це можливість відкрити для себе нові горизонти. <i>Кожен континент</i> має свої унікальні принади та особливості.</p>
+    <!-- Внутрішній стиль застосований до абзацу -->
+    <p style="font-size: 17px; color: #1d8348; background-color: #eafaf1; padding: 12px; border-left: 5px solid #27ae60;"><b>Подорожі</b> — це можливість відкрити для себе нові горизонти. <i>Кожен континент</i> має свої унікальні принади та особливості.</p>
     
-    <p>Плануючи відпустку, варто враховувати <b>сезонність</b>, бюджет та особисті вподобання. Нижче представлені таблиці з популярними напрямками.</p>
+    <p class="highlighted-text">Плануючи відпустку, варто враховувати <b>сезонність</b>, бюджет та особисті вподобання. Нижче представлені таблиці з популярними напрямками.</p>
 
     <!-- Проста таблиця 3x4 (пункт 3) -->
     <h2>Популярні туристичні місця</h2>
-    <table border="2" width="80%">
+    <table class="simple-table">
         <caption><b>ТОП напрямки для відпочинку</b></caption>
         
-        <tr align="center" bgcolor="#4682B4">
-            <th><font color="white">Франція</font></th>
-            <th><font color="white">Італія</font></th>
-            <th><font color="white">Іспанія</font></th>
-            <th><font color="white">Греція</font></th>
+        <tr>
+            <th>Франція</th>
+            <th>Італія</th>
+            <th>Іспанія</th>
+            <th>Греція</th>
         </tr>
         
         <!-- Перший рядок - картинки -->
-        <tr align="center">
-            <td><img src="https://picsum.photos/id/318/100/80" width="100" height="80" alt="Париж"></td>
-            <td><img src="https://picsum.photos/id/1040/100/80" width="100" height="80" alt="Рим"></td>
-            <td><img src="https://picsum.photos/id/1042/100/80" width="100" height="80" alt="Барселона"></td>
-            <td><img src="https://picsum.photos/id/1049/100/80" width="100" height="80" alt="Афіни"></td>
+        <tr>
+            <td><img src="https://picsum.photos/id/318/100/80" width="100" height="80" alt="Париж" class="gallery-image"></td>
+            <td><img src="https://picsum.photos/id/1040/100/80" width="100" height="80" alt="Рим" class="gallery-image"></td>
+            <td><img src="https://picsum.photos/id/1042/100/80" width="100" height="80" alt="Барселона" class="gallery-image"></td>
+            <td><img src="https://picsum.photos/id/1049/100/80" width="100" height="80" alt="Афіни" class="gallery-image"></td>
         </tr>
         
         <!-- Другий рядок - гіперпосилання -->
-        <tr align="center">
+        <tr>
             <td><a href="https://uk.wikipedia.org/wiki/Париж" target="_blank">Детальніше про Париж</a></td>
             <td><a href="https://uk.wikipedia.org/wiki/Рим" target="_blank">Детальніше про Рим</a></td>
             <td><a href="https://uk.wikipedia.org/wiki/Барселона" target="_blank">Детальніше про Барселону</a></td>
@@ -42,7 +61,7 @@
         </tr>
         
         <!-- Третій рядок - текст -->
-        <tr align="center">
+        <tr>
             <td>Ейфелева вежа, Лувр</td>
             <td>Колізей, Ватикан</td>
             <td>Саграда Фамілія</td>
@@ -55,7 +74,7 @@
     <!-- Складна таблиця (пункт 4) -->
     <h2 id="europe">Детальна інформація про тури в Європу</h2>
     
-    <table border="2" cellspacing="8" cellpadding="12" width="90%">
+    <table class="complex-table">
         <caption><b>Порівняння туристичних турів</b></caption>
         
         <colgroup>
@@ -64,38 +83,38 @@
             <col width="35%">
         </colgroup>
 
-        <tr align="center">
+        <tr>
             <th>Сезон</th>
             <th>Країна</th>
             <th>Ціна (від)</th>
             <th>Що включено</th>
         </tr>
         
-        <tr align="center" valign="middle">
-            <td rowspan="2"><b>Літо</b></td>
-            <td align="left">Хорватія</td>
+        <tr>
+            <td rowspan="2"><b class="important-content">Літо</b></td>
+            <td>Хорватія</td>
             <td>500€</td>
             <td>Переліт, готель 4*, сніданки</td>
         </tr>
-        <tr align="right" valign="top">
+        <tr>
             <td>Чорногорія</td>
             <td>400€</td>
             <td>Переліт, апартаменти, трансфер</td>
         </tr>
         
-        <tr align="center" valign="middle">
-            <td rowspan="2"><b>Зима</b></td>
-            <td align="left">Австрія (лижі)</td>
+        <tr>
+            <td rowspan="2"><b class="important-content">Зима</b></td>
+            <td>Австрія (лижі)</td>
             <td>800€</td>
             <td>Переліт, готель, скіпас</td>
         </tr>
-        <tr align="center" valign="bottom">
+        <tr>
             <td>Швейцарія</td>
             <td>1200€</td>
             <td>Все включено, преміум</td>
         </tr>
         
-        <tr align="center">
+        <tr>
             <td><b>Весна/Осінь</b></td>
             <td colspan="2">Екскурсійні тури по всій Європі</td>
             <td>Від 300€ — автобусні тури з гідом</td>
@@ -103,10 +122,12 @@
     </table>
 
     <br><br>
+    <div class="navigation-section">
     <h3>Навігація по сайту:</h3>
     <p><a href="index.html">Головна сторінка</a></p>
     <p><a href="contacts.html">Корисні ресурси (Iframe)</a></p>
     <p><a href="gallery.html">Галерея подорожей</a></p>
+    </div>
 
 </body>
 </html>
